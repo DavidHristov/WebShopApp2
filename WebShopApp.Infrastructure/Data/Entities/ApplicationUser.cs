@@ -7,22 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebShopApp.Infrastructure.Data
+namespace WebShopApp.Infrastructure.Data.Entities
 {
-    public class ApplicationUser:IdentityUser
+    public class ApplicationUser : IdentityUser
     {
         [Required]
         [MaxLength(30)]
-        public string FirstName {  get; set; }
+        public string FirstName { get; set; } = null!;
 
         [Required]
         [MaxLength(30)]
-        public string LastName { get; set; }
+        public string LastName { get; set; } = null!;
 
-
-        [Required, MaxLength(50)]
-        public string Adress {  get; set; }
-
-
+        [Required]
+        [MaxLength(50)]
+        public string Address { get; set; } = null!;
     }
 }
